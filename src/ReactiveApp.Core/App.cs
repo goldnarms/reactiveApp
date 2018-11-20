@@ -1,6 +1,7 @@
-﻿using MvvmCross.IoC;
+using MvvmCross.IoC;
 using MvvmCross.ViewModels;
 using ReactiveApp.Core.ViewModels.Home;
+using ReactiveApp.Core.ViewModels.Onboarding;
 
 namespace ReactiveApp.Core
 {
@@ -13,7 +14,7 @@ namespace ReactiveApp.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<HomeViewModel>();
+            RegisterAppStart<OnboardingViewModel>();
         }
     }
 }
