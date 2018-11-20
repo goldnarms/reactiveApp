@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using MvvmCross.ViewModels;
+using ReactiveApp.Core.ViewModels;
 
-namespace ReactiveApp.Core.ViewModels
+namespace Kakemons.Core.ViewModels
 {
     public abstract class BaseViewModelResult<TResult> : BaseViewModel, IMvxViewModelResult<TResult>
     {
@@ -16,6 +14,10 @@ namespace ReactiveApp.Core.ViewModels
                 CloseCompletionSource?.TrySetCanceled();
 
             base.ViewDestroy(viewFinishing);
+        }
+
+        protected BaseViewModelResult()
+        {
         }
     }
 }
